@@ -1,0 +1,15 @@
+%p
+= link_to "Add New User", new_user_path
+
+%h2 Current Users
+- if @users.any?
+
+  - @users.each do |user|
+    %ul
+      %li= link_to user.try(:name), user_path(user)
+
+- else
+  %h1 Nothing here!!
+
+
+
