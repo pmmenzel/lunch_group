@@ -1,0 +1,12 @@
+- if @groups.present?
+  - @groups.each_with_index do |group, i|
+    %ul
+      %li= "Lunch Group #{i+1} (with #{group.size} People)"
+      - group.each do |user|
+        %ul
+          - binding.pry if user.class == Array
+          %li= user.name
+        %p
+
+- else
+  %h4 No Users to generate groups

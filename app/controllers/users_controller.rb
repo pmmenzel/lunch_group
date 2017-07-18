@@ -18,11 +18,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = Model.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def destroy
-    @user = Model.find(params[:id]).destroy
+    @user = User.find(params[:id]).destroy
     flash[:notice] = 'User has been Deleted!'
 
     redirect_to '/'

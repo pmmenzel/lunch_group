@@ -7,6 +7,15 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    -# # ==== Removing/Adding back
+    %header.navbar.navbar-fixed-top.navbar-inverse
+    .container
+      %nav
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Groups Home", group_home_path
+          %li= link_to "Users Page",  users_path
+          %li= link_to "Create New User",  new_user_path
+    -# # /==== Removing/Adding back
     = yield
     %p
     = notice
