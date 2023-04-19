@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: Group_production
-  username: Group
+  database: group_production
+  username: group
   password: <%= ENV['LUNCHGROUP_DATABASE_PASSWORD'] %>
